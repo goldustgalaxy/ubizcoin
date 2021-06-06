@@ -1,0 +1,30 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/ubizcoin_bg.qm</file>
+        <file alias="ca">locale/ubizcoin_ca.qm</file>
+        <file alias="cs">locale/ubizcoin_cs.qm</file>
+        <file alias="da">locale/ubizcoin_da.qm</file>
+        <file alias="de">locale/ubizcoin_de.qm</file>
+        <file alias="en">locale/ubizcoin_en.qm</file>
+        <file alias="en_US">locale/ubizcoin_en_US.qm</file>
+        <file alias="es">locale/ubizcoin_es.qm</file>
+        <file alias="fi">locale/ubizcoin_fi.qm</file>
+        <file alias="fr_FR">locale/ubizcoin_fr_FR.qm</file>
+        <file alias="hr">locale/ubizcoin_hr.qm</file>
+        <file alias="it">locale/ubizcoin_it.qm</file>
+        <file alias="ja">locale/ubizcoin_ja.qm</file>
+        <file alias="ko_KR">locale/ubizcoin_ko_KR.qm</file>
+        <file alias="nl">locale/ubizcoin_nl.qm</file>
+        <file alias="pl">locale/ubizcoin_pl.qm</file>
+        <file alias="pt">locale/ubizcoin_pt.qm</file>
+        <file alias="pt_BR">locale/ubizcoin_pt_BR.qm</file>
+        <file alias="ro_RO">locale/ubizcoin_ro_RO.qm</file>
+        <file alias="ru">locale/ubizcoin_ru.qm</file>
+        <file alias="sk">locale/ubizcoin_sk.qm</file>
+        <file alias="sv">locale/ubizcoin_sv.qm</file>
+        <file alias="tr">locale/ubizcoin_tr.qm</file>
+        <file alias="uk">locale/ubizcoin_uk.qm</file>
+        <file alias="zh_CN">locale/ubizcoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/ubizcoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

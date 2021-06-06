@@ -1,0 +1,26 @@
+# /etc/conf.d/ubizcoind: config file for /etc/init.d/ubizcoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/ubizcoin/ubizcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/ubizcoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/ubizcoind.pid"
+
+# Where to write ubizcoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/ubizcoind"
+
+# User and group to own ubizcoind process
+#BITCOIND_USER="ubizcoin"
+#BITCOIND_GROUP="ubizcoin"
+
+# Path to ubizcoind executable
+#BITCOIND_BIN="/usr/bin/ubizcoind"
+
+# Nice value to run ubizcoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

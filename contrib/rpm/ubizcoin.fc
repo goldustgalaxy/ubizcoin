@@ -1,0 +1,8 @@
+/usr/bin/ubizcoin-cli		--	gen_context(system_u:object_r:ubizcoin_exec_t,s0)
+/usr/sbin/ubizcoind		--	gen_context(system_u:object_r:ubizcoin_exec_t,s0)
+/usr/lib(64)?/ubizcoin/ubizcoind		--	gen_context(system_u:object_r:ubizcoin_exec_t,s0)
+
+/etc/ubizcoin(/.*)?		gen_context(system_u:object_r:ubizcoin_conf_t,s0)
+/var/lib/ubizcoin(/.*)?		gen_context(system_u:object_r:ubizcoin_var_lib_t,s0)
+
+(/var)?/run/ubizcoind(/.*)?   gen_context(system_u:object_r:ubizcoin_var_run_t,s0)

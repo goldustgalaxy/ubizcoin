@@ -1,0 +1,81 @@
+policy_module(ubizcoin, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type ubizcoin_t;
+type ubizcoin_exec_t;
+init_daemon_domain(ubizcoin_t, ubizcoin_exec_t)
+
+permissive ubizcoin_t;
+
+type ubizcoin_initrc_exec_t;
+init_script_file(ubizcoin_initrc_exec_t)
+
+type ubizcoin_conf_t;
+files_type(ubizcoin_conf_t)
+
+type ubizcoin_var_lib_t;
+files_type(ubizcoin_var_lib_t)
+
+type ubizcoin_var_run_t;
+files_type(ubizcoin_var_run_t)
+
+type ubizcoin_port_t;
+corenet_port(ubizcoin_port_t)
+
+########################################
+#
+# ubizcoin local policy
+#
+allow ubizcoin_t self:process { fork };
+
+allow ubizcoin_t self:fifo_file rw_fifo_file_perms;
+allow ubizcoin_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(ubizcoin_t, ubizcoin_conf_t, ubizcoin_conf_t)
+manage_files_pattern(ubizcoin_t, ubizcoin_conf_t, ubizcoin_conf_t)
+
+manage_dirs_pattern(ubizcoin_t, ubizcoin_var_lib_t, ubizcoin_var_lib_t)
+manage_files_pattern(ubizcoin_t, ubizcoin_var_lib_t, ubizcoin_var_lib_t)
+files_var_lib_filetrans(ubizcoin_t, ubizcoin_var_lib_t, { dir file })
+
+manage_dirs_pattern(ubizcoin_t, ubizcoin_var_run_t, ubizcoin_var_run_t)
+manage_files_pattern(ubizcoin_t, ubizcoin_var_run_t, ubizcoin_var_run_t)
+
+sysnet_dns_name_resolve(ubizcoin_t)
+corenet_all_recvfrom_unlabeled(ubizcoin_t)
+
+allow ubizcoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(ubizcoin_t)
+corenet_tcp_sendrecv_generic_node(ubizcoin_t)
+corenet_tcp_sendrecv_all_ports(ubizcoin_t)
+corenet_tcp_bind_generic_node(ubizcoin_t)
+
+gen_require(`
+    type ubizcoin_port_t;
+')
+allow ubizcoin_t ubizcoin_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type ubizcoin_port_t;
+')
+allow ubizcoin_t ubizcoin_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(ubizcoin_t)
+
+files_read_etc_files(ubizcoin_t)
+
+miscfiles_read_localization(ubizcoin_t)
+
+sysnet_dns_name_resolve(ubizcoin_t)
+
+allow ubizcoin_t ubizcoin_exec_t:file execute_no_trans;
+allow ubizcoin_t self:process setsched;
+corecmd_exec_ls(ubizcoin_t)
+corenet_tcp_connect_http_port(ubizcoin_t)
+dev_read_urand(ubizcoin_t)
+fs_getattr_xattr_fs(ubizcoin_t)
+kernel_read_system_state(ubizcoin_t)

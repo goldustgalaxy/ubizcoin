@@ -1,0 +1,26 @@
+[Unit]
+Description=Ubizcoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=ubizcoin
+Group=ubizcoin
+
+Type=forking
+PIDFile=/var/lib/ubizcoind/ubizcoind.pid
+
+ExecStart=/usr/bin/ubizcoind -daemon -pid=/var/lib/ubizcoind/ubizcoind.pid \
+          -conf=/etc/ubizcoin/ubizcoin.conf -datadir=/var/lib/ubizcoind
+
+ExecStop=-/usr/bin/ubizcoin-cli -conf=/etc/ubizcoin/ubizcoin.conf \
+         -datadir=/var/lib/ubizcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

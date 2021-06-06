@@ -1,0 +1,6 @@
+usr/local/bin/ubizcoin-qt usr/bin
+share/pixmaps/bitcoin32.xpm usr/share/pixmaps
+share/pixmaps/bitcoin16.xpm usr/share/pixmaps
+share/pixmaps/bitcoin128.png usr/share/pixmaps
+debian/ubizcoin-qt.desktop usr/share/applications
+debian/ubizcoin-qt.protocol usr/share/kde4/services/

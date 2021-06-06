@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Ubizcoin
+Comment=Ubizcoin P2P Cryptocurrency
+Comment[fr]=Ubizcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Ubizcoin, eşten eşe kriptografik sanal para birimi
+Exec=ubizcoin-qt %u
+Terminal=false
+Type=Application
+Icon=ubizcoin128
+MimeType=x-scheme-handler/ubizcoin;
+Categories=Office;Finance;

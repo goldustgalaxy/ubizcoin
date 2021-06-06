@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=UbizCoin Core
+Comment=UbizCoin P2P Cryptocurrency
+Exec=ubizcoin-qt %u
+Terminal=false
+Type=Application
+Icon=ubizcoin128
+MimeType=x-scheme-handler/ubizcoin;
+Categories=Office;Finance;
+StartupWMClass=UbizCoin-qt
+Name[en_US]=ubizcoin-qt.desktop
