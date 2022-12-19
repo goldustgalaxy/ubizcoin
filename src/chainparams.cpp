@@ -54,13 +54,29 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x001"));
+    (0, uint256("0x00000e5b79033217db013643d275509bdbb434b3b633a034ea9c16e98f1286e9"))
+    (1, uint256("0x000003efced1ca25fe85fa4f040388911f798f2024294522939bdd16fc591430"))
+    (6, uint256("0x000003cd49de353fd65fd1adf3579e34bcea8f7469ca67e9eb84c0b7a9ae35ff"))
+    (7, uint256("0x00000ee7c37ebc69c80f3a965a6f8cf1ad912d7ffd66712dc33807bffb4123fd"))
+    (16, uint256("0x0000040f53208cc4ad8aa7fd2b546c3c919e0a858523b0756eeb684b726a2c3f"))
+    (100, uint256("0x00000268cf6d2fa3d6ee9eb448c11f120ddaccb5f9cd39cee7745831becf211b"))
+    (439, uint256("0x000000c44a0f14f4e4a4f3684d4f79d505f4e8644ef6cbfd12a74231b84f555a"))
+    (5000, uint256("0x0000003f258ba9b6eb9afacf503b1cc8bc0aa1f7aee8216eda69c73f5fb3afa1"))
+    (10000, uint256("0x000000039d738359bb58a0043ee27e7a464a24e66b33566fa000bda883760a48"))
+    (37013, uint256("0x0000001bcbbab32cdfc24c7dad80978c501625c2c97d12389a5cf8c04d00f311"))
+    (45480, uint256("0x00000030211b30c9145daf1a4b25b48035f9e8822ee0574606d6592808f5d6cc"))
+    (45481, uint256("0x00000028462f201d07ae15e597cadeac3b25a59257ef47e65ced5f3a75b511a1"))
+    (45482, uint256("0x000000315cf6f1c784fdad9759e4637a1511e7109ebdaeec947ed0af7fe91536"))
+    (45483, uint256("0x0000001138aab15db364f2188f67ecfd03d01888af042ffb559d28508f185544"))
+    (45484, uint256("0x000000163805c57a4967a5eb4b1d151c01ec54d1371dac451b4edc985a83f2cf"))
+    (45560, uint256("0x000000011e34aa529566f1544a76e4c06d2b909494c0ed3939e32fccc08e163d"));
+
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1530415500, // * UNIX timestamp of last checkpoint block
-    424358,    // * total number of transactions between genesis and last checkpoint
+    1671473602, // * UNIX timestamp of last checkpoint block
+    45641,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    2000        // * estimated number of transactions per day after checkpoint
+    1.000000  // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -152,8 +168,13 @@ public:
         assert(hashGenesisBlock == uint256("0x00000e5b79033217db013643d275509bdbb434b3b633a034ea9c16e98f1286e9"));
         assert(genesis.hashMerkleRoot == uint256("0xb6d5cdd92ac07d76eda4ea6e01e10ed86b835559ad6ce5816271dfe136e098ea"));
 		
-        vSeeds.push_back(CDNSSeedData("149.28.144.182", "149.28.144.182"));
-		
+        vSeeds.push_back(CDNSSeedData("official seed01", "149.28.144.182"));
+        vSeeds.push_back(CDNSSeedData("official seed02", "139.180.220.244"));
+        vSeeds.push_back(CDNSSeedData("official seed03", "45.63.79.135"));
+        vSeeds.push_back(CDNSSeedData("official seed04", "45.32.113.173"));
+        vSeeds.push_back(CDNSSeedData("community seed01", "seed01.altcoinbuilders.com"));
+        vSeeds.push_back(CDNSSeedData("community seed02", "seed02.altcoinbuilders.com"));
+
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 68);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 130);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 192);
@@ -288,7 +309,7 @@ public:
     {
         networkID = CBaseChainParams::REGTEST;
         strNetworkID = "regtest";
-        strNetworkID = "regtest";
+
         pchMessageStart[0] = 0x1a;
         pchMessageStart[1] = 0x6f;
         pchMessageStart[2] = 0x13;

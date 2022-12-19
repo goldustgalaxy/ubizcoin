@@ -3490,8 +3490,8 @@ https://www.transifex.com/ubizcoin-project/ubizcoin-project-translations</transl
         <translation>Você deve especificar uma masternodeprivkey na configuração. Favor verificar o manual para obter ajuda.</translation>
     </message>
     <message>
-        <source>(3310 could be used only on mainnet)</source>
-        <translation>(3310 could be used only on mainnet)</translation>
+        <source>(30130 could be used only on mainnet)</source>
+        <translation>(30130 could be used only on mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -3502,8 +3502,8 @@ https://www.transifex.com/ubizcoin-project/ubizcoin-project-translations</transl
         <translation>(padrão: 1)</translation>
     </message>
     <message>
-        <source>(must be 3310 for mainnet)</source>
-        <translation>(deve ser 3310 para mainnet)</translation>
+        <source>(must be 30130 for mainnet)</source>
+        <translation>(deve ser 30130 para mainnet)</translation>
     </message>
     <message>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>

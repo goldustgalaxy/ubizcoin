@@ -226,10 +226,10 @@ QT_TRANSLATE_NOOP("ubizcoin-network", ""
 QT_TRANSLATE_NOOP("ubizcoin-network", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("ubizcoin-network", "(3310 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("ubizcoin-network", "(30130 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("ubizcoin-network", "(default: %s)"),
 QT_TRANSLATE_NOOP("ubizcoin-network", "(default: 1)"),
-QT_TRANSLATE_NOOP("ubizcoin-network", "(must be 3310 for mainnet)"),
+QT_TRANSLATE_NOOP("ubizcoin-network", "(must be 30130 for mainnet)"),
 QT_TRANSLATE_NOOP("ubizcoin-network", "<category> can be:"),
 QT_TRANSLATE_NOOP("ubizcoin-network", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("ubizcoin-network", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
