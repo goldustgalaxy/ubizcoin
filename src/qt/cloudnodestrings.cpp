@@ -226,10 +226,10 @@ QT_TRANSLATE_NOOP("cloudnode-network-v2", ""
 QT_TRANSLATE_NOOP("cloudnode-network-v2", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("cloudnode-network-v2", "(3310 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("cloudnode-network-v2", "(30130 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("cloudnode-network-v2", "(default: %s)"),
 QT_TRANSLATE_NOOP("cloudnode-network-v2", "(default: 1)"),
-QT_TRANSLATE_NOOP("cloudnode-network-v2", "(must be 3310 for mainnet)"),
+QT_TRANSLATE_NOOP("cloudnode-network-v2", "(must be 30130 for mainnet)"),
 QT_TRANSLATE_NOOP("cloudnode-network-v2", "<category> can be:"),
 QT_TRANSLATE_NOOP("cloudnode-network-v2", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("cloudnode-network-v2", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
